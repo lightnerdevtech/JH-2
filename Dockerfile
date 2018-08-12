@@ -16,7 +16,9 @@ RUN apt-get update && \
     gcc && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
  
- # R packages including IRKernel which gets installed globally.
+USER $NB_UID
+
+# R packages including IRKernel which gets installed globally.
 RUN conda install --quiet --yes \
     'rpy2=2.8*' \
     'r-base=3.4.1' \
