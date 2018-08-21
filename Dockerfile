@@ -3,7 +3,14 @@ ARG JUPYTERHUB_VERSION=0.9.1
 RUN pip install --no-cache \
     jupyterhub==$JUPYTERHUB_VERSION \ 
     faodata==1.1  \ 
-    wbdata==0.2.7
+    wbdata==0.2.7 \
+    reportlab==3.5.6 \ 
+    colour==0.1.5 \ 
+    pyproj==1.9.5.1 \ 
+    selenuim \ 
+    pillow==5.2.0
+
+    
 
 USER root
 
