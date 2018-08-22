@@ -7,7 +7,12 @@ RUN pip install --no-cache \
     reportlab==3.5.6 \ 
     colour==0.1.5 \ 
     pyproj==1.9.5.1 \ 
-    pillow==5.2.0
+    pillow==5.2.0 \ 
+    holoviews==1.10.7 \ 
+    country_converter==0.6.6 \ 
+    lxlm==4.2.4 
+    
+    
 
     
 
@@ -17,6 +22,7 @@ USER root
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     fonts-dejavu \
+    fonts-open-sans \
     tzdata \
     gfortran \
     gcc && apt-get clean && \
@@ -26,6 +32,7 @@ USER $NB_UID
 
 # R packages including IRKernel which gets installed globally.
 RUN conda install --quiet --yes \
+    'phantomjs' \
     'rpy2=2.8*' \
     'r-base=3.4.1' \
     'r-irkernel=0.8*' \
