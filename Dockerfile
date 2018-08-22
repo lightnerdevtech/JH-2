@@ -7,7 +7,6 @@ RUN pip install --no-cache \
     reportlab==3.5.6 \ 
     colour==0.1.5 \ 
     pyproj==1.9.5.1 \ 
-    selenuim==3.14.0 \ 
     pillow==5.2.0
 
     
