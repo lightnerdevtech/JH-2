@@ -10,7 +10,7 @@ RUN pip install --no-cache \
     pillow==5.2.0 \ 
     holoviews==1.10.7 \ 
     country_converter==0.6.6 \ 
-    lxlm==4.2.4 
+    lxml==4.2.4 
     
     
 
