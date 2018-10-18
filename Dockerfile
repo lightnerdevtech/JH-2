@@ -10,7 +10,8 @@ RUN pip install --no-cache \
     pillow==5.2.0 \ 
     holoviews==1.10.7 \ 
     country_converter==0.6.6 \ 
-    lxml==4.2.4 
+    lxml==4.2.4 \ 
+    regex==2018.08.29
     
     
 
@@ -20,9 +21,12 @@ USER root
 
 # R pre-requisites
 RUN apt-get update && \
+    apt-get install git-lfs \
     apt-get install -y --no-install-recommends \
     fonts-dejavu \
     fonts-open-sans \
+    fonts-work-sans \ 
+    fonts-abel \ 
     tzdata \
     gfortran \
     gcc && apt-get clean && \
