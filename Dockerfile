@@ -21,7 +21,9 @@ USER root
 
 # R pre-requisites
 RUN apt-get update && \
-    apt-get install git-lfs \
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash &&
+    apt-get install git-lfs && \
+    git lfs install && \
     apt-get install -y --no-install-recommends \
     fonts-dejavu \
     fonts-open-sans \
